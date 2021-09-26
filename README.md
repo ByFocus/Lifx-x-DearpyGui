@@ -6,4 +6,5 @@ USAGE
 
 token = "aasdasdasdasdasddgjsdfgjsf"    
 2- Change the id lights
+
 If you dont know what is your id light follow this instructions https://api.developer.lifx.com/docs/list-lights
