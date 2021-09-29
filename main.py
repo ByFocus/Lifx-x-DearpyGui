@@ -12,16 +12,16 @@ def selector_changer(sender):
         selector = "all"
         print("You've chosen all lights") 
     if sender == 50:
-        selector = "id:d073d5560686"
+        selector = "Here goes your id light"
         print("You've chosen light numer 1") 
     if sender == 51:
-        selector = "id:d073d555c957"
+        selector = "Here goes your id light"
         print("You've chosen light numer 2") 
     if sender == 52:
-        selector = "id:d073d555b26b"
+        selector = "Here goes your id light"
         print("You've chosen light numer 3") 
     if sender == 53:
-        selector = "id:d073d5560563"
+        selector = "Here goes your id light"
         print("You've chosen light numer 4") 
 
 def color_changer(sender):
