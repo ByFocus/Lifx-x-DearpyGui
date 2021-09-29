@@ -3,8 +3,8 @@ import requests
 import json
 import token
 headers = {"Authorization": "Bearer %s" % token,}
-selector = "all"
 changeColor = ""
+selector = "all"
 
 def selector_changer(sender):
     global selector
@@ -50,7 +50,6 @@ def color_changer(sender):
         "power": "on",
         "color": changeColor
             },
-           
         ]
     }
     response = requests.put('https://api.lifx.com/v1/lights/states', data=json.dumps(payload), headers=headers)
@@ -68,7 +67,6 @@ def get_color_value():
     color_changer(sender=105)
     
 
-
 def lights_controll(sender):
     if sender == 26:
         petition = 'off'
@@ -83,10 +81,7 @@ def lights_controll(sender):
             },
         ],
     }
-
     response = requests.put('https://api.lifx.com/v1/lights/states', data=json.dumps(payload), headers=headers)
-
-
 
 def button_callback(sender):
     print(f"sender is: {sender}")
@@ -96,14 +91,12 @@ petition = ''
     
 def sender_value_brightness():
   brightness_value = dpg.get_value(sliderBrightness)
-  
   payload = {
     "states": [
       {
           "selector" : selector,
           "brightness": brightness_value
     },
-    
         ]
   }
   response = requests.put('https://api.lifx.com/v1/lights/states', data=json.dumps(payload), headers=headers)
